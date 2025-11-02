@@ -3106,6 +3106,33 @@ display: flex;
   color: white;
 }
 
+.page-menu__toggle {
+  display: none;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background: white;
+  border: none;
+  border-radius: 24px;
+  font-size: 18px;
+  font-weight: 500;
+  color: #000;
+  cursor: pointer;
+  width: 100%;
+  justify-content: space-between;
+  transition: all 0.3s ease;
+}
+
+
+
+.page-menu__toggle-icon {
+  transition: transform 0.3s ease;
+}
+
+.page-menu__toggle--active .page-menu__toggle-icon {
+  transform: rotate(90deg);
+}
+
 .sec-page .container {
   background-color: var(--light-color);
   border-radius: 24px;
@@ -3287,7 +3314,198 @@ display: flex;
   background: #EAEAEA;
 }
 
+.userContent img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin: 24px 0;
+  border-radius: 8px;
+}
 
+@media (max-width: 768px) {
+  .sec-page {
+    padding: 32px 0;
+    margin: 0;
+  }
+
+  .sec-page--with-menu {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+  }
+
+  .sec-page__sidebar {
+    width: 100%;
+    position: relative;
+    top: 0;
+  }
+
+  .page-menu__toggle {
+    display: flex;
+  }
+
+  .page-menu {
+    display: none;
+    margin-top: 16px;
+  }
+
+
+  .page-grid__wrapper
+{
+  display: flex;
+  flex-direction: column;
+}
+
+.form-section__img{
+  display: none;
+}
+
+.page-grid__title{
+  font-size: 24px;
+}
+
+.page-grid__text{
+  font-size: 12px;
+}
+
+.page-grid__item{
+  height: 500px;
+  background-size: cover;
+  background-position: center;
+}
+
+.page-grid__left{
+  height: 100%;
+  justify-content: flex-end;
+}
+
+.why-us--grid .container{
+  padding: 16px;
+}
+
+.page-grid__item{
+  padding: 16px;
+  gap: 16px;
+  border-radius: 10px;
+}
+
+  .page-menu--open {
+    display: flex;
+  }
+
+  .sec-page .container {
+    margin: 0 0;
+  }
+
+  .sec-page__wrapper {
+    padding: 16px;
+  }
+
+  .breadcrumbs {
+    gap: 8px;
+    flex-wrap: wrap;
+  }
+
+  .breadcrumbs__link,
+  .breadcrumbs__desc,
+  .breadcrumbs__current {
+    font-size: 12px;
+  }
+
+  .userContent h1 {
+    font-size: 32px;
+    margin-bottom: 16px;
+  }
+
+  .userContent h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+  }
+
+  .userContent h3 {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+
+  .userContent p {
+    font-size: 16px;
+    margin-bottom: 16px;
+  }
+
+  .userContent strong {
+    font-size: 16px;
+  }
+
+  .userContent img {
+    margin: 16px 0;
+    border-radius: 8px;
+  }
+
+  .userContent__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+    margin: 24px 0;
+  }
+
+  .userContent__grid--2 {
+    grid-template-columns: 1fr;
+  }
+
+  .userContent__grid--3 {
+    grid-template-columns: 1fr;
+  }
+
+  .userContent__grid-item figcaption {
+    font-size: 14px;
+    margin-top: 8px;
+  }
+
+  .userContent ul,
+  .userContent ol {
+    margin: 16px 0;
+    padding-left: 20px;
+  }
+
+  .userContent ul li,
+  .userContent ol li {
+    font-size: 16px;
+    line-height: 150%;
+  }
+
+  .userContent__quote {
+    flex-direction: column;
+    gap: 16px;
+    padding: 16px;
+    margin: 24px 0;
+  }
+
+  .userContent__quote svg {
+    width: 32px;
+    height: 32px;
+  }
+
+  .userContent__quote p {
+    font-size: 16px;
+  }
+
+  .userContent table {
+    display: block;
+    overflow-x: auto;
+    margin: 24px 0;
+  }
+
+  .userContent table th {
+    padding: 16px;
+    font-size: 14px;
+    min-width: 120px;
+  }
+
+  .userContent table td {
+    padding: 16px;
+    font-size: 14px;
+    min-width: 120px;
+  }
+}
 
 .news {
   padding-bottom: 64px;
@@ -4247,7 +4465,7 @@ display: flex;
     overflow: hidden;
     align-items: flex-end;
     background-size: contain;
-    background-image: url('https://celebrated-phoenix-71ef66.netlify.app/img/form-bg1.svg') !important;
+    background-image: url('../img/form-bg1.svg') !important;
     position: relative;
   }
   .callback__left::before {
@@ -4564,6 +4782,355 @@ display: flex;
 
 .footer__top-link{
   font-size: 12px;
+}
+
+.content-page__right{
+  display: none;
+}
+
+.page-info__wrapper{
+  flex-direction: column;
+  gap: 16px;
+  padding:  16px;
+  border-radius: 10px;
+}
+
+.page-info__title{
+  font-size: 24px;
+  margin-bottom: 0;
+}
+
+.content-info__icon{
+  width: 100px;
+  height: 100px;
+}
+
+.content-info__icon img{
+ width: 60px;
+ height: 60px;
+ object-fit: contain;
+ object-position: center;
+ object-fit: contain;
+}
+
+.content-page__section{
+  padding:  16px;
+  gap: 16px;
+  border-radius: 10px;
+}
+
+.content-stack__text{
+  font-size: 12px ;
+}
+
+.content-stack__wrapper img{
+  width: 60px;
+}
+
+.stages__grid{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.stages__number{
+  font-size: 42px;
+}
+
+.stages__text{
+  font-size: 16px;
+}
+
+.content-page__content{
+  gap: 16px;
+}
+
+.reviews__wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.reviews__content{
+  gap: 16px;
+}
+
+.reviews__text{
+  gap: 16px;
+  font-size: 12px;
+}
+
+.reviews__text-icon svg{
+ display: none;
+}
+
+.reviews__text-icon{
+  display: none;
+}
+
+.gallery__grid{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.gallery__text{
+  font-size: 12px;
+}
+
+
+.gallery__item{
+  height: 100px;
+  border-radius: 10px;
+}
+
+
+.reviews__proffesion{
+  font-size: 16px;
+}
+
+.reviews__name{
+  font-size: 24px;
+}
+
+.content-form{padding: 0;}
+
+.content-info__wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.why-us__row{
+  display: flex;
+  padding: 0;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.why-us__slider-wrapper{
+  padding-left: 0;
+}
+
+.content-page .projects{
+  width: 100%;
+}
+
+.projects .container{
+  padding: 0;
+}
+
+.content-page__title{
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.content-page__text{
+  font-size: 12px;
+  margin-bottom: 16px;
+}
+
+.content-page__block{
+  gap:0;
+}
+
+.content-page__wrapper{
+  gap:0;
+}
+
+.content-page__subtitle{
+  font-size: 16px;
+  margin-bottom: 16px;
+}
+
+.content-list__item{
+  font-size: 12px;
+}
+
+.content-form__title{
+  font-size: 20px;
+}
+
+.content-info__content{
+  gap: 0;
+}
+
+.content-form__top{
+  flex-direction: row;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 16px;
+}
+
+.content-form__arrow svg{
+  width: 32px;
+  height: 32px;
+}
+
+.accordion__question{
+  font-size: 14px !important;
+}
+
+.content-page__grid{
+  display: flex;
+  flex-direction: column;
+}
+
+.content-form__wrapper{
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.content-form__row{
+  flex-direction: column;
+  display: flex;
+  margin-bottom: 16px;
+  gap: 16px;
+}
+
+.content-page__list-content{
+  font-size: 12px;
+}
+
+.content-page__list-icon{
+  font-size: 32px;
+}
+
+.why-us{
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.why-us__title{
+  font-size: 24px;
+  margin-bottom: 16px;
+}
+
+.content-form__btn{
+  width: 100%;
+  height: 72px;
+  border-radius: 10px;
+  background-color: var(--acent-color);
+}
+
+.content-page__list-content strong{
+  font-weight: 700;
+  font-size: 12px;
+}
+
+.content-page__list-content p{
+  font-size: 12px;
+}
+
+.content-page__list-content ul{
+  font-size: 12px;
+}
+
+.content-page__list-item{
+  gap: 12px;
+}
+
+.content__page-text{
+  font-size: 12px;
+}
+
+.content-page__grid:last-of-type{
+  display: flex;
+  padding: 32px 0;
+  flex-direction: column;
+}
+
+.team__item{
+
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 16px;
+}
+
+.team__content{
+  gap: 16px;
+  
+}
+
+.technologies .container{
+  padding: 0;
+}
+
+.contacts__phone , .contacts__link, .contacts__addres{
+  font-size: 16px;
+  gap: 16px;
+}
+
+.page-info{
+  padding: 16px 0;
+}
+
+.contacts__block{
+  gap: 16px;
+}
+
+.news__grid{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.news__item{
+  border-radius: 10px;
+}
+
+.news__content{
+  padding: 24px;
+  height: auto;
+}
+
+.page-projects__wrapper{
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.page-projects__nav-wrapper{
+  padding: 16px;
+  border-radius: 10px;
+}
+
+.page-projects__nav-row{
+  margin-bottom: 16px;
+}
+
+.page-projects__nav-btns{
+  flex-wrap: nowrap;
+  overflow: auto;
+}
+
+.page-projects__nav-btns > *{
+  flex-shrink: 0;
+  padding: 8px;
+  font-size: 12px;
+}
+
+.page-projects__nav-title{
+  font-size: 16px;
+}
+
+.page-projects__item{
+  padding: 16px;
+  border-radius: 10px;
+  height: auto;
+  
+
+}
+
+.page-projects__title{
+  font-size: 25px;
+}
+
+.page-projects__item{
+  flex-direction: column;
 }
 }
 
