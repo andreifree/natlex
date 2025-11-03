@@ -170,7 +170,7 @@ a {
   width: -moz-max-content;
   width: max-content;
   border-radius: 16px;
-  padding: 24px 50px;
+  padding: 29px 24px;
   background: var(--acent-color);
   font-weight: 600;
   font-size: 20px;
@@ -661,8 +661,9 @@ a {
   display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
+  gap: 30px;
   align-items: center;
-  gap: min(calc(73vw * var(--desktop)), 73px);
+  justify-content: space-between;
 }
 .nav__item:hover .nav__link {
   color: var(--acent-color);
@@ -1699,7 +1700,7 @@ display: flex;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  gap: calc(64vw * var(--desktop));
+  gap: 30px;
 }
 .footer__nav-item {
   font-weight: 600;
@@ -2066,9 +2067,14 @@ display: flex;
   flex-direction: column;
   gap: 24px;
 }
+
+.content-page .content-page__right{
+  height: 590px;
+}
+
 .content-page__right {
   -ms-grid-column-span: 4;
-  height: 590px;
+  height: auto;
   grid-column: 4 span;
   border-radius: 24px;
 }
@@ -3281,11 +3287,19 @@ display: flex;
   font-family: "Manrope", sans-serif;
 }
 
+.userContent__table-wrapper {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  margin: 32px 0;
+}
+
 .userContent table {
   width: 100%;
   border-collapse: collapse;
-  margin: 32px 0;
+  margin: 0;
   background: white;
+  min-width: 600px;
 }
 
 .userContent table th {
@@ -3308,9 +3322,6 @@ display: flex;
   color: #000;
   border: 5px solid white;
   vertical-align: top;
-}
-
-.userContent table tr td {
   background: #EAEAEA;
 }
 
@@ -3381,6 +3392,12 @@ display: flex;
 
 .why-us--grid .container{
   padding: 16px;
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.why-us__btn{
+  display: none;
 }
 
 .page-grid__item{
@@ -3488,22 +3505,31 @@ display: flex;
     font-size: 16px;
   }
 
-  .userContent table {
-    display: block;
+  .sec-page--with-menu .container{
+    width: 
+    100% !important;
+  }
+
+  .userContent__table-wrapper {
+    width: 100%;
+    max-width: 100%;
     overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
     margin: 24px 0;
+  }
+
+  .userContent table {
+    min-width: 600px;
   }
 
   .userContent table th {
     padding: 16px;
     font-size: 14px;
-    min-width: 120px;
   }
 
   .userContent table td {
     padding: 16px;
     font-size: 14px;
-    min-width: 120px;
   }
 }
 
@@ -3607,6 +3633,81 @@ display: flex;
 @media screen and (max-width: 1440px) {
 .nav__list{
     gap: 16px;
+  }
+
+  .sec-page__wrapper{
+    padding: 32px;
+  }
+
+  .page-menu__item{
+    padding: 18px;
+    font-size: 18px;  
+  }
+
+  .footer__social{
+    gap: 12px;
+  }
+
+  .footer__phone{
+    font-size: 20px;
+  }
+
+  .footer__text{
+    font-size: 10px;
+  }
+
+  .footer__politic{
+    font-size: 10px;
+  }
+
+  .page-grid__item{
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: right;
+    padding: 32px;
+  }
+
+  .page-projects__nav-btn{
+    padding: 16px;
+    font-size: 12px;
+  }
+
+  .page-projects__item{
+    padding: 32px;
+    gap: 32px;
+  }
+
+  .tabs__btn{
+    padding: 25px ;
+  }
+
+  .page-info__wrapper , .content-page__section{
+    padding: 32px !important;
+  }
+
+  .stages__number{
+    font-size: 80px;
+  }
+
+  .page-grid__title{
+    font-size: 32px;
+  }
+
+  .why-us--grid .container{
+    padding: 32px;
+  }
+
+  .projects__wrapper{
+    padding: 32px;
+    gap: 32px;
+  }
+
+  .footer__nav-item{
+    font-size: 18px;
+  }
+
+  .footer__logo img{
+    width: 200px;
   }
 
   .btn{
@@ -4112,6 +4213,10 @@ display: flex;
   border-radius: 2px;
 }
 
+.callback-form__wrapper .callback-form__btn{
+  display: none;
+}
+
 .burger.active .burger__line:nth-child(1) {
   transform:translateY(6.5px) rotate(45deg)
 }
@@ -4420,6 +4525,15 @@ display: flex;
     max-width: 100%;
   }
 
+  .callback-form__wrapper .callback-form__btn{
+    display: block;
+  }
+
+  .projects{
+    margin: 0 16px;
+  }
+  
+
   .projects__title{
     font-size: 24px;
     margin-bottom: 16px;
@@ -4463,9 +4577,10 @@ display: flex;
     flex-direction: row;
     background-position: 90% 100%;
     overflow: hidden;
+    border-radius: 10px;
     align-items: flex-end;
     background-size: contain;
-    background-image: url('../img/form-bg1.svg') !important;
+    background-image: url('https://celebrated-phoenix-71ef66.netlify.app/img/form-bg1.svg') !important;
     position: relative;
   }
   .callback__left::before {
@@ -4489,6 +4604,19 @@ display: flex;
     z-index: 1;
   }
 
+  .why-us--grid .why-us__row{
+    margin: 0;
+  }
+
+  .whiyc{
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .accordion__answer{
+    padding: 0 16px !important;
+  }
+
 
   .callback__left svg{
     width: 40px;
@@ -4501,6 +4629,8 @@ display: flex;
 
 .callback-form__wrapper{
   padding: 24px 16px;
+  border-radius: 10px;
+
 }
 
 .callback-form__title{
@@ -4608,6 +4738,18 @@ display: flex;
   gap: 16px;
 }
 
+.technologies{
+  margin: 0 16px;
+}
+
+.projects , .callback, .technologies , .about , .form-section , .faq , .substitution , .page-grid{
+  padding-bottom: 32px;
+}
+
+.form-section__wrapper{
+  flex-direction: column;
+}
+
 .about__title{
   font-size: 24px;
   margin-bottom: 16px;
@@ -4697,7 +4839,6 @@ display: flex;
 }
 
 .substitution__left{
-  padding: 48px;
   gap: 0;
   border-radius: 10px;
 }
@@ -4720,6 +4861,12 @@ display: flex;
 .substitution__subtitle{
   font-size: 16px;
   margin-bottom: 16px;
+}
+
+
+
+.sec-page__wrapper{
+  padding: 8px;
 }
 
 .substitution__text{
@@ -4999,7 +5146,7 @@ display: flex;
 }
 
 .why-us{
-  padding: 16px;
+  padding:  0 16px;
   border-radius: 10px;
 }
 
