@@ -758,7 +758,7 @@ display: flex;
   -ms-grid-column-span: 4;
   grid-column: 4 span;
   border-radius: 24px;
-  padding: 64px;
+  padding: 70px 64px;
   background-color: var(--light-color);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -883,12 +883,15 @@ display: flex;
   border-radius: 24px;
   background-color: var(--acent-color);
   background-repeat: no-repeat;
-  background-size: cover;
-  position: absolute;
+  background-size: contain;
   top: 0;
   left: 0;
   align-items: center;
   justify-content: center;
+}
+
+.hero__image-wrapper img{
+  object-fit: contain;
 }
 .hero__image-wrapper--active {
   display: flex;
@@ -2719,7 +2722,7 @@ display: flex;
 }
 .stages__icon {
   display: block;
-}
+  flex-shrink: 0;}
 .stages__text {
   margin: 0;
   font-family: "Manrope", sans-serif;
@@ -3207,7 +3210,13 @@ display: flex;
   transition: all 0.3s ease;
 }
 
+.technologies.whiyc .container{
+  padding: 0;
+}
 
+.content-page__list-icon{
+  flex-shrink: 0;
+}
 
 .userContent__grid--3 {
   grid-template-columns: repeat(3, 1fr);
@@ -3338,6 +3347,7 @@ display: flex;
     padding: 32px 0;
     margin: 0;
   }
+
 
   .sec-page--with-menu {
     flex-direction: column;
@@ -3630,10 +3640,23 @@ display: flex;
   color: var(--acent-color);
 }
 
+.reviews__text-icon{
+  flex-shrink: 0;
+}
+
 @media screen and (max-width: 1440px) {
 .nav__list{
     gap: 16px;
   }
+
+  .content-form{
+    padding: 32px 0 !important;
+  }
+
+  .stages__text{
+    font-size: 20px;
+  }
+
 
   .sec-page__wrapper{
     padding: 32px;
@@ -3686,7 +3709,7 @@ display: flex;
   }
 
   .stages__number{
-    font-size: 80px;
+    font-size: 70px;
   }
 
   .page-grid__title{
@@ -3818,7 +3841,7 @@ display: flex;
 }
 
   .hero__left{
-    padding: 48px;
+    padding:64px 48px;
   }
  
   .nav__link{
@@ -4580,7 +4603,7 @@ display: flex;
     border-radius: 10px;
     align-items: flex-end;
     background-size: contain;
-    background-image: url('https://celebrated-phoenix-71ef66.netlify.app/img/form-bg1.svg') !important;
+    background-image: url('../img/form-bg1.svg') !important;
     position: relative;
   }
   .callback__left::before {
