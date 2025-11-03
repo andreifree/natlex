@@ -86,8 +86,41 @@ const projectsSlider = new Swiper('.projects__slider', {
   navigation: {
     nextEl: '.projects__next',
     prevEl: '.projects__prev'
+  },
+  on: {
+    slideChange: function() {
+      const activeSlide = this.slides[this.activeIndex];
+      const subtitle = document.querySelector('.projects__subtitle');
+      const text = document.querySelector('.projects__text');
+      const btn = document.querySelector('.projects__btn');
+      
+      if (activeSlide && subtitle && text && btn) {
+        subtitle.innerHTML = activeSlide.dataset.subtitle || '';
+        text.textContent = activeSlide.dataset.text || '';
+        btn.href = activeSlide.dataset.link || '#';
+      }
+    }
   }
 });
+
+const initProjectsContent = () => {
+  const firstSlide = document.querySelector('.projects__slide');
+  if (firstSlide) {
+    const subtitle = document.querySelector('.projects__subtitle');
+    const text = document.querySelector('.projects__text');
+    const btn = document.querySelector('.projects__btn');
+    
+    if (subtitle && text && btn) {
+      subtitle.innerHTML = firstSlide.dataset.subtitle || '';
+      text.textContent = firstSlide.dataset.text || '';
+      btn.href = firstSlide.dataset.link || '#';
+    }
+  }
+};
+
+if (document.querySelector('.projects__slider')) {
+  initProjectsContent();
+}
 
 //faq
 
