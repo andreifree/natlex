@@ -3353,10 +3353,9 @@ display: flex;
   .header__phone{
     font-size: 14px !important;
   }
-  .header__phone-icon{
-    width: 24px;
-    height: 24px;
-  }
+
+
+
 }
 
 @media (max-width: 768px) {
@@ -3365,6 +3364,9 @@ display: flex;
     margin: 0;
   }
 
+  .las{
+    padding: 0 !important;
+  }
 
   .sec-page--with-menu {
     flex-direction: column;
@@ -4303,6 +4305,31 @@ display: flex;
   color: #3bc6c5;
 }
 
+.ms.projects .container{
+padding: 0;
+}
+
+.sa{
+  padding: 16px;
+}
+
+.swiper{
+  cursor: grab;
+}
+
+
+@media (max-width: 1280px) {
+  .projects__slider-wrapper {
+    position: relative;
+    max-width: 578px;
+}
+
+.swiper-button-prev, .swiper-button-next{
+  width: 48px;
+  height: 48px;
+}
+}
+
 .nav__bottom {
   display: none;
 }
@@ -4310,6 +4337,10 @@ display: flex;
 @media (max-width: 1024px) {
   .burger {
     display: flex;
+  }
+
+  .projects__left{
+    width: 100%;
   }
 
   .header__phone {
@@ -5100,7 +5131,7 @@ display: flex;
   font-size: 24px;
 }
 
-.content-form{padding: 0;}
+.content-form{padding: 0 !important;}
 
 .content-info__wrapper{
   display: flex;
